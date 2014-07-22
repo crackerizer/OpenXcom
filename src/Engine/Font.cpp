@@ -38,7 +38,7 @@ SDL_Color Font::_palette[] = {{0, 0, 0, 0},
 /**
  * Initializes the font with a blank surface.
  */
-Font::Font() : _surface(0), _width(0), _height(0), _spacing(0), _chars(), _monospace(false)
+Font::Font() : _surface(0), _width(0), _height(0), _spacing(0), _vspacing(0), _chars(), _monospace(false)
 {
 }
 
@@ -69,8 +69,9 @@ void Font::load(const YAML::Node &node)
 	_width = node["width"].as<int>(_width);
 	_height = node["height"].as<int>(_height);
 	_spacing = node["spacing"].as<int>(_spacing);
+	_vspacing = node["vspacing"].as<int>(_vspacing);
 	_monospace = node["monospace"].as<bool>(_monospace);
-	std::string image = "Language/" + node["image"].as<std::string>();
+	std::string path = "Language/fonts/" + node["path"].as<std::string>();
 
 	Surface *fontTemp = new Surface(_width, _height);
 	fontTemp->loadImage(CrossPlatform::getDataFile(image));
@@ -217,6 +218,18 @@ int Font::getSpacing() const
 {
 	return _spacing;
 }
+
+/**
+ * Returns the vertical spacing for any character in the font.
+ * @return Vertical spacing in pixels.
+ * @note This does not refer to character vertical spacing within the surface,
+ * but to the spacing used between base character and its accent.
+ */
+int Font::getVspacing() const
+{
+	return _vspacing;
+}
+
 
 /**
  * Returns the dimensions of a particular character in the font.

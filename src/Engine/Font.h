@@ -43,7 +43,7 @@ private:
 	static std::wstring _index;
 	static SDL_Color _palette[6];
 	Surface *_surface;
-	int _width, _height, _spacing;
+	int _width, _height, _spacing, _vspacing;
 	std::map<wchar_t, SDL_Rect> _chars;
 	bool _monospace;
 public:
@@ -75,6 +75,8 @@ public:
 	int getHeight() const;
 	/// Gets the spacing between characters.
 	int getSpacing() const;
+	/// Gets the vertical spacing between characters.
+	int getVspacing() const;	
 	/// Gets the size of a particular character;
 	SDL_Rect getCharSize(wchar_t c);
 	/// Gets the font's surface.
