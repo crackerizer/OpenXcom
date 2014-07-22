@@ -1,0 +1,24 @@
+Language Module
+
+1.File structure
+	Language
+		|- fonts
+		|	|- fontname1
+		|	|	|- big
+		|	|	|- small
+		|	|	|- geobig
+		|	|	|- geosmall
+		|	|		|- unicode1.png
+		|	|		|- unicode2.png
+		|	|		|- .......
+		|	|- fontname2
+		|	|......
+		|- lang1.dat
+		|- lang1.yml
+		|- .....
+		|- langn.dat
+		|- langn.yml
+
+* fonts folder contains all supported fonts in form of folders. Folder name will
+be used as font name.
+* each font contains 4 subfolders including big, small, geobig and geosmall. 
