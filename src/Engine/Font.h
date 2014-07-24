@@ -21,6 +21,7 @@
 
 #include <map>
 #include <string>
+#include <cstdio>
 #include <SDL.h>
 #include <yaml-cpp/yaml.h>
 
@@ -42,7 +43,7 @@ class Font
 private:
 	static std::wstring _index;
 	static SDL_Color _palette[6];
-	Surface *_surface;
+	std::map<wchar_t, Surface *> _surface;
 	int _width, _height, _spacing, _vspacing;
 	std::map<wchar_t, SDL_Rect> _chars;
 	bool _monospace;

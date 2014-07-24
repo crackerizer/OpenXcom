@@ -38,7 +38,7 @@ SDL_Color Font::_palette[] = {{0, 0, 0, 0},
 /**
  * Initializes the font with a blank surface.
  */
-Font::Font() : _surface(0), _width(0), _height(0), _spacing(0), _vspacing(0), _chars(), _monospace(false)
+Font::Font() : _surface(), _width(0), _height(0), _spacing(0), _vspacing(0), _chars(), _monospace(false)
 {
 }
 
@@ -73,13 +73,36 @@ void Font::load(const YAML::Node &node)
 	_monospace = node["monospace"].as<bool>(_monospace);
 	std::string path = "Language/fonts/" + node["path"].as<std::string>();
 
-	Surface *fontTemp = new Surface(_width, _height);
-	fontTemp->loadImage(CrossPlatform::getDataFile(image));
-	_surface = new Surface(fontTemp->getWidth(), fontTemp->getHeight());
-	_surface->setPalette(_palette, 0, 6);
-	fontTemp->blit(_surface);
-	delete fontTemp;
-	init();
+	for (size_t i = 0; i < _index.length(); ++i)
+	{
+		char cFilename[5];
+		
+		sprintf(cFilename, "%04x", wstr2Utf8(_index[i]));
+		
+		std::string fileName = path;
+		fileName += "/";
+		fileName += cFilename;
+		fileName += ".png";
+		
+		
+/*		
+		Surface *fontTemp = new Surface(_width, _height);
+		fontTemp->loadImage(CrossPlatform::getDataFile(image));
+		_surface = new Surface(fontTemp->getWidth(), fontTemp->getHeight());
+		_surface->setPalette(_palette, 0, 6);
+		fontTemp->blit(_surface);
+		delete fontTemp;
+		init();	
+		SDL_Rect rect;
+		int startX = i % length * _width;
+		int startY = i / length * _height;
+		rect.x = startX;
+		rect.y = startY;
+		rect.w = _width;
+		rect.h = _height;
+		_chars[_index[i]] = rect;
+*/		
+	}		
 }
 
 /**
