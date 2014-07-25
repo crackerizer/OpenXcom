@@ -1,32 +1,30 @@
 en-US:
 	name: US English
 	lang: en-US.yml
-	charlist:
-		-	chars: >
-				!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖŐŰÙÚÛÜÝÞŸßàáâãäåæçèéêëìíîïðñòóôõöőűùúûüýþÿФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯфисвуапршолдьтщзйкыегмцчнябБжЖхХъЪэЭюЮĆĘęąŁćłĄŚśźżŻŹŃńĂăȘȚșțČĎĚŇŘŠŤŮŽčďěňřšťůžЄєŒœіІїЇøØĞŞİğşıΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψωΆΈΉΊΌΎΏάέήίόύώςΐϊĹĽŔĺľŕ∞Ёё
-			is_accent: 0
-			fonts:
-  				- id: FONT_BIG
-    				path: default/big
-    				width: 16
-    				height: 16
-    				spacing: 0
-    				vspacing: 0
-				- id: FONT_SMALL
-					path: default/small
-					width: 8
-					height: 9
-					spacing: -1
-					vspacing: 0
-				- id: FONT_GEO_BIG
-					path: default/geobig
-					width: 5
-					height: 9
-					spacing: 1
-					vspacing: 0
-				- id: FONT_GEO_SMALL
-					path: default/geosmall
-					width: 5
-					height: 7
-					spacing: 1
-					vspacing: 0
+	chars: >
+		!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖŐŰÙÚÛÜÝÞŸßàáâãäåæçèéêëìíîïðñòóôõöőűùúûüýþÿФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯфисвуапршолдьтщзйкыегмцчнябБжЖхХъЪэЭюЮĆĘęąŁćłĄŚśźżŻŹŃńĂăȘȚșțČĎĚŇŘŠŤŮŽčďěňřšťůžЄєŒœіІїЇøØĞŞİğşıΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψωΆΈΉΊΌΎΏάέήίόύώςΐϊĹĽŔĺľŕ∞Ёё
+	fonts:
+		- id: FONT_BIG
+			path: default/big
+			width: 16
+			height: 16
+			spacing: 0
+			vspacing: 0
+		- id: FONT_SMALL
+			path: default/small
+			width: 8
+			height: 9
+			spacing: -1
+			vspacing: 0
+		- id: FONT_GEO_BIG
+			path: default/geobig
+			width: 5
+			height: 9
+			spacing: 1
+			vspacing: 0
+		- id: FONT_GEO_SMALL
+			path: default/geosmall
+			width: 5
+			height: 7
+			spacing: 1
+			vspacing: 0

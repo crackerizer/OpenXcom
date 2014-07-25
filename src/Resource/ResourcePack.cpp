@@ -248,7 +248,7 @@ void ResourcePack::setPalette(SDL_Color *colors, int firstcolor, int ncolors)
 {
 	for (std::map<std::string, Font*>::iterator i = _fonts.begin(); i != _fonts.end(); ++i)
 	{
-		i->second->getSurface()->setPalette(colors, firstcolor, ncolors);
+		//i->second->getSurface()->setPalette(colors, firstcolor, ncolors);
 	}
 	for (std::map<std::string, Surface*>::iterator i = _surfaces.begin(); i != _surfaces.end(); ++i)
 	{

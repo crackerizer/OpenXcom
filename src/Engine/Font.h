@@ -21,7 +21,8 @@
 
 #include <map>
 #include <string>
-#include <cstdio>
+#include <sstream>
+#include <fstream>
 #include <SDL.h>
 #include <yaml-cpp/yaml.h>
 
@@ -47,6 +48,7 @@ private:
 	int _width, _height, _spacing, _vspacing;
 	std::map<wchar_t, SDL_Rect> _chars;
 	bool _monospace;
+	std::string _imgtype;
 public:
 	/// Creates a blank font.
 	Font();
@@ -81,9 +83,9 @@ public:
 	/// Gets the size of a particular character;
 	SDL_Rect getCharSize(wchar_t c);
 	/// Gets the font's surface.
-	Surface *getSurface() const;
+//	Surface *getSurface() const;
 
-	void fix(const std::string &file, int width);
+//	void fix(const std::string &file, int width);
 };
 
 }
